@@ -12,12 +12,15 @@ Feature:Checkout
 			
 	Scenario Outline:Add an item to the basket
 		Given Go To HomePage 
-		When I fill in "searchTerm" with "168-3906"
-		And I click Up quantity
+		When I fill in "searchTerm" with "<RSStockReference>"
+		And I click Up quantity "<N times>" times
 		And I click on the "addToBasket" button
 		Then Verify the basket amount
-		
-		
+	
+	Examples:
+		|RSStockReference| N times 	|
+		|168-3906		 | 		2	|
+		|168-3906		 |      3   |
 		
 		
 	

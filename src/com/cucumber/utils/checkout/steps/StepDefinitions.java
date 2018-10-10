@@ -54,19 +54,22 @@ public class StepDefinitions implements BasicActions{
     	clickOnElement(gpm.getElement(buttonLocator));
     }
     
-    @When("^I click Up quantity$")
-    public void upQuantity() {
+    @When("^I click Up quantity \"([^\"]*)\" times$")
+    public void upQuantity(String nTimes) {
     	setUp();
-    	clickOnElement(gpm.getElement("increaseButton"));
+    	int n = Integer.parseInt(nTimes);
+    	for(int i = 0; i < n; i++)
+    		clickOnElement(gpm.getElement("increaseButton"));
     }
     
     @Then("^Verify the basket amount$")
     public void verifyAmount() {
+    	Float prevPrice = Float.parseFloat(gpm.getElement("basketAmt").getText().substring(1).replace(",", ""));
 		Float price = Float.parseFloat(gpm.getElement("unitPrice").getText().substring(1));
 		Integer q = Integer.parseInt(gpm.getElement("amount").getAttribute("value").split(" ")[0]);
 		gpm.getDriver().navigate().refresh();
 		Float actualPrice =  Float.parseFloat(gpm.getElement("basketAmt").getText().substring(1).replace(",", ""));
-		assertEquals(actualPrice.floatValue(), price.floatValue()*q.intValue());   	
+		assertEquals(actualPrice.floatValue() - prevPrice.floatValue(), price.floatValue()*q.intValue(),0.001);
     }
  
     @Then("^I should see \"([^\"]*)\" message$")
