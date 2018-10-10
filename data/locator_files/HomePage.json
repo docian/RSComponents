@@ -1,0 +1,47 @@
+{
+	"searchTerm":{
+		"id":"searchTerm",
+		"cssSelector":"#searchTerm"
+		},
+	"basketAmt":{
+		"id":"js-basketAmt",
+		"cssSelector":"#js-basketAmt"
+	},
+	"prodDescription":{
+		"cssSelector":"#pagecell > div > div.col-xs-12.prodDescDivLL > div.col-xs-10 > h1"
+	},
+	"price":{
+		"cssSelector":"#price-break-container > div > div:nth-child(1) > div.topPriceArea > div.current-price > div.product-price > span.price"
+	},
+	"inputGroup":{
+		"cssSelector":"#price-break-container > div > div.addToCartRTQContainer > div > div.input-group.spinner > input"
+	},
+	"unitPrice":{
+		"cssSelector":"#value-row-100\\20 \\2b > div.unitPrice.col-xs-4"
+	},
+	"units":{
+		"cssSelector":"#value-row-100\\20 \\2b > div.breakRangeWithoutUnit.col-xs-4"
+	},
+	"indicativePrice":{
+		"cssSelector":"#value-row-100\\20 \\2b > div.indicativePrice.col-xs-4"
+	},
+	"zeroResult":{
+		"cssSelector":"#zeroResultBody > h2:nth-child(1)"
+	},
+	"declineButton":{
+		"cssSelector":"#acsMainInvite > div > a.acsInviteButton.acsDeclineButton"
+	},
+	"increaseButton":{
+		"cssSelector":"#price-break-container > div > div.addToCartRTQContainer > div > div.input-group.spinner > div > button:nth-child(1)"
+	},
+	"amount":{
+		"cssSelector":"#price-break-container > div > div.addToCartRTQContainer > div > div.input-group.spinner > input"
+	},
+	"addToBasket":{
+		"cssSelector":"#price-break-container > div > div.addToCartRTQContainer > div > div.add-to-basket-container > div > button"
+	},
+	"allProducts":{
+		"cssSelector":"body > div.headerContainer > div > ul > li.allProducts > a"
+	}
+	
+}

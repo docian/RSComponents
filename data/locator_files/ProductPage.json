@@ -1,0 +1,12 @@
+{
+	"searchTerm":{
+		"id":"searchTerm",
+		"cssSelector":"#searchTerm"
+		},
+	"prodDescription":{
+		"cssSelector":"#pagecell > div > div.col-xs-12.prodDescDivLL > div.col-xs-10 > h1"
+	},
+	"price":{
+		"cssSelector":"#price-break-container > div > div:nth-child(1) > div.topPriceArea > div.current-price > div.product-price > span.price"
+	}
+}
